@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "Chill Pixels";
+    src: url(/font/ChillPixels-Maximal.otf);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+    color: #FFFFFF;
+    font-family: "Chill Pixels";
+    background-image: url("imgs/backgroundMirror.png");
+    background-repeat: repeat;
+}
+
+.container {
+	max-width: 360px;
+    height: 800px;
+    background-image: url("imgs/background.png");
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.inner-wrapper {
+	display: flex;
+    flex-direction: column;
+    gap: 55px;
+    padding: 40px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.main-game-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.counter-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+}
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.blobe-coin {
+    width: 30px;
+    height: 30px;
+}
+
+.league {
+    font-size: 12px;
+}
+
+.blob-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.stamina-bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.energy-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.energy-amount {
+    color: #74C9FE;
+}
