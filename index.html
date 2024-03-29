@@ -3,25 +3,27 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	    <link rel="stylesheet" href="style.css">
 	    <title>Blobert Game</title>
     </head>
     <body>
         <div class="container">
-            <div class="inner-wrapper">
-                <div class="nav-bar">
-                    <div class="navigation">
-                        <img src="/imgs/xicon.svg" class="" alt="x">
-                        <h3 class="nav-text">Blobert Game</h3>
-                    </div>
+            <div class="nav-bar">
+                <div class="navigation">
+                    <img src="/imgs/sign.png" class="" alt="x">
                 </div>
+            </div>
+            <div class="inner-wrapper">
                 <div class="main-game-wrapper">
                     <div class="counter-wrapper">
                         <div class="counter">
                             <img src="/imgs/blobe-coin.png" class="blobe-coin" alt="o">
                             <h1 class="amount" id="amount">0</h1>
                         </div>
-                        <p class="league">Silver League</p>
+                        <div class="league-wrapper">
+                            <p class="league">designer.stark</p>
+                        </div>
                     </div>
                     <div class="blob-wrapper">
                         <img src="/imgs/bubble.png" id="bubble" class="" alt="O">
@@ -29,14 +31,15 @@
                 </div>
                 <div class="stamina-bar-wrapper">
                     <div class="energy-wrapper">
-                        <p class="energy">Energy:</p>
+                        <img src="imgs/energy-ico.png" class="energy-ico" alt="⚡">
                         <p class="energy-amount" id="energy-amount">250</p>
-                    </div>
-                    <div class="stamina-bar">
-                        <img src="/imgs/stamina-bar.png" class="" alt="-----------">
+                        <div class="stamina-bar">
+                            <img src="/imgs/stamina-bar.png" class="" alt="-----------">
+                        </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
         <script src="https://telegram.org/js/telegram-web-app.js"></script>

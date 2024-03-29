@@ -3,20 +3,31 @@
     src: url(/font/ChillPixels-Maximal.otf);
 }
 
+@font-face {
+    font-family: "Dogica Pixel";
+    src: url(/font/dogica.otf);
+}
+
 body {
 	margin: 0;
 	padding: 0;
 	font-size: 18px;
     color: #FFFFFF;
     font-family: "Chill Pixels";
-    background-image: url("imgs/backgroundMirror.png");
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-image: url("imgs/background.png");
+    background-size: 125%;
     background-repeat: repeat;
+    background-position: center;
 }
 
 .container {
 	max-width: 360px;
     height: 800px;
     background-image: url("imgs/background.png");
+    background-size: 300%;
     background-repeat: repeat;
     background-position: center;
 }
@@ -65,12 +76,14 @@ h3 {
 }
 
 .blobe-coin {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 38px;
 }
 
 .league {
-    font-size: 12px;
+    font-size: 8px;
+    font-family: "Dogica Pixel";
+    color: #74C9FE;
 }
 
 .blob-wrapper {
@@ -89,7 +102,14 @@ h3 {
 .energy-wrapper {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.energy-ico {
+    width: 18px;
+    height: 24px;
 }
 
 .energy-amount {
