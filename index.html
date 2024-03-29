@@ -8,7 +8,7 @@
 	    <title>Blobert Game</title>
     </head>
     <body>
-        <div class="container">
+        <div class="container" id="container">
             <div class="nav-bar">
                 <div class="navigation">
                     <img src="/imgs/sign.png" class="" alt="x">
@@ -32,9 +32,9 @@
                 <div class="stamina-bar-wrapper">
                     <div class="energy-wrapper">
                         <img src="imgs/energy-ico.png" class="energy-ico" alt="⚡">
-                        <p class="energy-amount" id="energy-amount">250</p>
+                        <p class="energy-amount" id="energy-amount">100</p>
                         <div class="stamina-bar">
-                            <img src="/imgs/stamina-bar.png" class="" alt="-----------">
+                            <progress id="stamina" max="100" value="100"></progress>
                         </div>
                     </div>
                 </div>

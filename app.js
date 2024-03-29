@@ -1,30 +1,50 @@
 
 
 var start = 0;
-var energy = 250;
+var energy = 100;
+var refillstate = false;
 
 document.getElementById('bubble').setAttribute('draggable', false);
 document.getElementById('bubble').onclick = counterAdd
 
+function refillEnergy() {
+    setTimeout(function() {
+        energy = energy + 1;
+        document.getElementById('energy-amount').innerText = energy;
+        document.getElementById('stamina').value = energy;
+        if (energy == 100) {
+            refillstate = false;
+        } else {
+            refillEnergy();
+        }
+    }, 1000)
+}
+
 function counterAdd() {
     if (energy > -1) {
-    document.getElementById('amount').innerText = start++;
-    document.getElementById('energy-amount').innerText = energy--;
-    $("#bubble").animate({
-        'width': 235,
-        'height': 216
-    }, 50, function() { 
+        if (energy != 100 && refillstate == false) {
+            refillstate = true;
+            refillEnergy();
+        }
+        document.getElementById('amount').innerText = start++;
+        document.getElementById('energy-amount').innerText = energy--;
+        $('body').append($("<div/>").attr("id", "flyingtext").addClass("flyingtext").html("<div>+1</div>").animate({
+            opacity: "0",
+            'line-height':'90px'
+          }, 200 , function() {
+            $("#flyingtext").remove();
+          }));
+        document.getElementById('stamina').value -= 1;
         $("#bubble").animate({
-            'width': 246,
-            'height': 227
-        }, 50,)
-    })
+            'width': 235,
+            'height': 216
+        }, 50, function() { 
+            $("#bubble").animate({
+                'width': 246,
+                'height': 227
+            }, 50,)
+        })
     } else {
-        document.getElementById('amount').innerText = 'Wait!';
-        setTimeout(function() {
-            energy = energy + 25;
-            document.getElementById('energy-amount').innerText = energy;
-            document.getElementById('amount').innerText = start;
-        }, 5000)
+        
     }
 }
