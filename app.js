@@ -1,12 +1,40 @@
 let tg = window.Telegram.WebApp;
 
 tg.expand();
-tg.setHeaderColor("#000000");
+tg.setHeaderColor("#083977");
 tg.setBackgroundColor("#000000")
 
 var start = 0;
 var energy = 100;
 var refillstate = false;
+
+$("#bubble").animate({
+    'width': 0,
+    'height': 0,
+    opacity: "0"
+}, 0, function() { 
+    $("#bubble").delay(350).animate({
+        'width': 246,
+        'height': 227,
+        opacity: "1"
+    }, 550, )
+})
+
+$("#stamina-wrapper").animate({
+    opacity: "0"
+}, 0, function() { 
+    $("#stamina-wrapper").delay(250).animate({
+        opacity: "1"
+    }, 550, )
+})
+
+$("#counter-wrapper").animate({
+    opacity: "0"
+}, 0, function() { 
+    $("#counter-wrapper").animate({
+        opacity: "1"
+    }, 550, )
+})
 
 document.getElementById('bubble').setAttribute('draggable', false);
 document.getElementById('bubble').onclick = counterAdd
