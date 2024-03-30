@@ -5,7 +5,14 @@
 
 @font-face {
     font-family: "Dogica Pixel";
-    src: url(/font/dogica.otf);
+    src: url(/font/dogicapixel.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Dogica Pixel";
+    src: url(/font/dogicapixelbold.otf);
+    font-weight: bold;
 }
 
 body {
@@ -26,7 +33,7 @@ body {
 
 .container {
 	max-width: 360px;
-    height: 100%;
+    height: var(--tg-viewport-height);
     background-image: url("imgs/background.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -74,6 +81,12 @@ h3 {
     flex-direction: row;
     gap: 20px;
     align-items: center;
+}
+
+.amount { 
+    font-family: "Dogica Pixel";
+    font-size: 36px;
+    font-weight: bold;
 }
 
 .blobe-coin {
