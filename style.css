@@ -18,14 +18,14 @@ body {
     align-content: center;
     justify-content: center;
     background-image: url("imgs/background.png");
-    background-size: 125%;
+    background-size: 80%;
     background-repeat: repeat;
     background-position: center;
 }
 
 .container {
 	max-width: 360px;
-    height: 800px;
+    height: 100%;
     background-image: url("imgs/background.png");
     background-size: 300%;
     background-repeat: repeat;
@@ -35,7 +35,7 @@ body {
 .inner-wrapper {
 	display: flex;
     flex-direction: column;
-    gap: 55px;
+    gap: 35px;
     padding: 40px;
 }
 
@@ -111,26 +111,23 @@ h3 {
 progress {
     border-radius: 25px; 
     width: 167px;
-    height: 27px;
+    height: 21px;
     box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
 }
 
 progress::-webkit-progress-bar {
-    background: linear-gradient(180deg, rgba(200,255,134,1) 0%, rgba(114,157,63,1) 100%);
+    background: #FFFFFF;
     border-radius: 25px;
-    padding: 3.5px;
     border-style: solid;
     border-color: #000000;
     border-width: 2px;
     box-shadow: inset 2px 3px 0px rgba(255, 255, 255, 0.3);
+    outline: 3px solid rgba(200,255,134,1);
 }
 
 progress::-webkit-progress-value {
     background-color: #74C9FE;
     border-radius: 25px;
-    border-style: solid;
-    border-color: #000000;
-    border-width: 2px;
     box-shadow: inset 0px -2px 0px rgba(41, 100, 157, 0.50), inset 0px -6px 0px rgba(54, 142, 174, 0.40);
 }
 
@@ -156,6 +153,7 @@ progress::-webkit-progress-value {
              1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
     position: absolute;
     z-index: 10;
+    margin-left: -200px;
     top: 375px;
     font-size: 32px;
     pointer-events: none;
