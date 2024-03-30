@@ -1,4 +1,6 @@
+let tg = window.Telegram.WebApp;
 
+tg.expand();
 
 var start = 0;
 var energy = 100;
@@ -28,6 +30,7 @@ function counterAdd() {
         }
         document.getElementById('amount').innerText = start++;
         document.getElementById('energy-amount').innerText = energy--;
+        tg.HapticFeedback.impactOccurred('light');
         $('body').append($("<div/>").attr("id", "flyingtext").addClass("flyingtext").html("<div>+1</div>").css({"top": Math.random() * (450 - 300) + 300, "margin-left": Math.random() * (250 - -250) + -250}).animate({
             opacity: "0",
             'line-height':'90px'

@@ -17,8 +17,9 @@ body {
     display: flex;
     align-content: center;
     justify-content: center;
+    background-color: #000000;
     background-image: url("imgs/background.png");
-    background-size: 80%;
+    background-size: 62rem;
     background-repeat: repeat;
     background-position: center;
 }
@@ -27,8 +28,8 @@ body {
 	max-width: 360px;
     height: 100%;
     background-image: url("imgs/background.png");
-    background-size: 300%;
-    background-repeat: repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -110,8 +111,8 @@ h3 {
 
 progress {
     border-radius: 25px; 
-    width: 167px;
-    height: 21px;
+    width: 170px;
+    height: 20px;
     box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
 }
 
@@ -122,7 +123,7 @@ progress::-webkit-progress-bar {
     border-color: #000000;
     border-width: 2px;
     box-shadow: inset 2px 3px 0px rgba(255, 255, 255, 0.3);
-    outline: 3px solid rgba(200,255,134,1);
+    outline: 4px solid rgba(200,255,134,1);
 }
 
 progress::-webkit-progress-value {
