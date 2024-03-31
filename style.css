@@ -113,11 +113,21 @@ h3 {
     height: 227px;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
 .bubble { 
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
 .stamina-bar-wrapper {
@@ -179,7 +189,10 @@ progress::-moz-progress-value {
 }
 
 .energy-amount {
+    display: flex;
     color: #74C9FE;
+    width: 45px;
+    justify-content: center;
 }
 
 .flyingtext {
