@@ -136,44 +136,46 @@ h3 {
     width: 100%;
 }
 
-progress {
-    border-radius: 25px; 
+.progress {
+    --progress: 100%;
+    
     width: 170px;
     height: 20px;
-    box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
-}
-
-progress::-webkit-progress-bar {
-    background: #FFFFFF;
-    border-radius: 25px;
-    border-style: solid;
-    border-color: #000000;
-    border-width: 2px;
-    box-shadow: inset 2px 3px 0px rgba(255, 255, 255, 0.3);
+    border: 2px solid #000000;
+    box-shadow: 0 0 10px #aaa;
+    border-radius: 50px;
+    background-color: #ffffff;
     outline: 4px solid rgba(200,255,134,1);
-}
-
-progress::-moz-progress-bar {
-    background: #FFFFFF;
-    border-radius: 25px;
-    border-style: solid;
-    border-color: #000000;
-    border-width: 2px;
-    box-shadow: inset 2px 3px 0px rgba(255, 255, 255, 0.3);
-    outline: 4px solid rgba(200,255,134,1);
-}
-
-progress::-webkit-progress-value {
-    background-color: #74C9FE;
-    border-radius: 25px;
-    box-shadow: inset 0px -2px 0px rgba(41, 100, 157, 0.50), inset 0px -6px 0px rgba(54, 142, 174, 0.40);
-}
-
-progress::-moz-progress-value {
-    background-color: #74C9FE;
-    border-radius: 25px;
-    box-shadow: inset 0px -2px 0px rgba(41, 100, 157, 0.50), inset 0px -6px 0px rgba(54, 142, 174, 0.40);
-}
+  }
+  
+  .progress .bar {
+    width: var(--progress);
+    height: 100%;
+    background: linear-gradient(#74C9FE, #74C9FE, #74C9FE);
+    background-repeat: repeat;
+    box-shadow: 0 0 10px 0px #74C9FE;
+    animation: 
+      shine 4s ease-in infinite,
+      end 1s ease-out 1 7s;
+    border-radius: 50px;
+    box-shadow: 0 0 10px 0px #74C9FE, inset 0px -2px 0px rgba(41, 100, 157, 0.50), inset 0px -6px 0px rgba(54, 142, 174, 0.40);
+  }
+  
+  @property --progress {
+    syntax: "<length>";
+    initial-value: 100%;
+    inherits: true;
+  }
+  
+  @keyframes shine {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 50px; }
+  }
+  
+  @keyframes end {
+    0%, 100% { box-shadow: 0 0 10px 0px #74C9FE, inset 0px -2px 0px rgba(41, 100, 157, 0.50), inset 0px -6px 0px rgba(54, 142, 174, 0.40); }
+    50% { box-shadow: 0 0 15px 5px #74C9FE, inset 0px -2px 0px rgba(41, 100, 157, 0.50), inset 0px -6px 0px rgba(54, 142, 174, 0.40); }
+  }
 
 .energy-wrapper {
     display: flex;

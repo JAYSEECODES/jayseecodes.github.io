@@ -4,6 +4,8 @@ tg.expand();
 tg.setHeaderColor("#000000");
 tg.setBackgroundColor("#000000")
 
+const bar = document.querySelector(".bar");
+
 var start = 0;
 var energy = 100;
 var refillstate = false;
@@ -43,7 +45,7 @@ function refillEnergy() {
     setTimeout(function() {
         energy = energy + 1;
         document.getElementById('energy-amount').innerText = energy;
-        document.getElementById('stamina').value = energy;
+        bar.style.setProperty("--progress", energy + "%");
         if (energy == 100) {
             refillstate = false;
         } else {
@@ -67,7 +69,7 @@ function counterAdd() {
           }, 500 , function() {
             $("#flyingtext").remove();
           }));
-        document.getElementById('stamina').value -= 1;
+        bar.style.setProperty("--progress", energy + "%");
         $("#bubble").animate({
             'width': 235,
             'height': 216
