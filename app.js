@@ -10,6 +10,14 @@ var start = 0;
 var energy = 100;
 var refillstate = false;
 
+function expandable() {
+    if (tg.isExpanded == false) {
+        tg.expand();
+    }
+}
+
+document.body.addEventListener("click", expandable)
+
 $("#bubble").animate({
     'width': 0,
     'height': 0,
