@@ -5,6 +5,7 @@ tg.setHeaderColor("#000000");
 tg.setBackgroundColor("#000000")
 
 const bar = document.querySelector(".bar");
+const coin = document.querySelector(".bubble");
 
 var start = 0;
 var energy = 100;
@@ -16,7 +17,24 @@ function expandable() {
     }
 }
 
+function rotateOnClick(event) {
+    viewWidth = (window.innerWidth - 246) / 2;
+    viewHeight = (window.innerHeight - 227) / 2;
+    xPercentHalf = ((event.clientX - viewWidth) / 246);
+    yPercentHalf = ((event.clientY - viewHeight) / 227);
+    xPercent = (xPercentHalf - 0.5) * 30;
+    yPercent = (0.5 - yPercentHalf) * 30;
+    console.log(Math.round(yPercent));
+    coin.style.setProperty("--xRot", Math.round(xPercent) + "deg");
+    coin.style.setProperty("--yRot", Math.round(yPercent) + "deg");
+    setTimeout(function() {
+        coin.style.setProperty("--xRot", Math.round(0) + "deg");
+        coin.style.setProperty("--yRot", Math.round(0) + "deg");
+    }, 100)
+}
+
 document.body.addEventListener("click", expandable)
+document.getElementById('bubble').addEventListener("click", rotateOnClick)
 
 $("#bubble").animate({
     'width': 0,

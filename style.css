@@ -118,9 +118,13 @@ h3 {
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
+    perspective: 600px;
 }
 
-.bubble { 
+.bubble {
+    --xRot: 0deg;
+    --yRot: 0deg;
+
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
     user-select: none;
@@ -128,6 +132,8 @@ h3 {
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
+    transform: rotateX(var(--yRot)) rotateY(var(--xRot));
+    transition: all 0.1s ease-out;
 }
 
 .stamina-bar-wrapper {
