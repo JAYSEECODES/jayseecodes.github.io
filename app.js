@@ -12,10 +12,10 @@ var energy = 100;
 var refillstate = false;
 
 
-function copyClipboard() {
+function copyClipboard(event) {
     navigator.clipboard.writeText(document.getElementById('league').textContent);
 
-    $('body').append($("<div/>").attr("id", "flyingtext").addClass("flyingtextcopy").css({"top": 200}).html("<div>COPIED</div>").animate({
+    $('body').append($("<div/>").attr("id", "flyingtext").addClass("flyingtextcopy").css({"top": event.clientY}).html("<div>COPIED</div>").animate({
         opacity: "0",
         top: "-=50px"
       }, 500 , function() {
@@ -38,7 +38,6 @@ function rotateOnClick(event) {
     yPercentHalf = ((event.clientY - viewHeight) / 227);
     xPercent = (xPercentHalf - 0.5) * 30;
     yPercent = (0.5 - yPercentHalf) * 30;
-    console.log(Math.round(yPercent));
     coin.style.setProperty("--xRot", Math.round(xPercent) + "deg");
     coin.style.setProperty("--yRot", Math.round(yPercent) + "deg");
     setTimeout(function() {
@@ -94,22 +93,22 @@ function refillEnergy() {
     }, 1000)
 }
 
-function counterAdd() {
+function counterAdd(event) {
     if (energy > -1) {
         if (energy != 100 && refillstate == false) {
             refillstate = true;
             refillEnergy();
         }
         document.getElementById('amount').innerText = start++;
+        bar.style.setProperty("--progress", energy + "%");
         document.getElementById('energy-amount').innerText = energy--;
         tg.HapticFeedback.impactOccurred('light');
-        $('body').append($("<div/>").attr("id", "flyingtext").addClass("flyingtext").html("<div>+1</div>").css({"top": Math.random() * (450 - 300) + 300, "margin-left": Math.random() * (250 - -250) + -250}).animate({
+        $('body').append($("<div/>").attr("id", "flyingtext").addClass("flyingtext").html("<div>+1</div>").css({"top": event.clientY - 40, "left": event.clientX + Math.random() * (15 - -15) - 15}).animate({
             opacity: "0",
-            top: "-=50px",
-          }, 500 , function() {
+            top: "-=120px",
+          }, 900 , function() {
             $("#flyingtext").remove();
           }));
-        bar.style.setProperty("--progress", energy + "%");
         $("#bubble").animate({
             'width': 235,
             'height': 216

@@ -40,13 +40,21 @@ body {
     background-position: center;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .inner-wrapper {
+    flex: 1;
 	display: flex;
     flex-direction: column;
     gap: 35px;
     padding: 40px;
+}
+
+.nav-bar {
+    flex: 1;
 }
 
 .navigation {
@@ -201,6 +209,11 @@ h3 {
 .energy-ico {
     width: 18px;
     height: 24px;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
 .energy-amount {
@@ -215,8 +228,6 @@ h3 {
              1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
     position: absolute;
     z-index: 10;
-    margin-left: -200px;
-    top: 375px;
     font-size: 32px;
     pointer-events: none;
 }
@@ -231,9 +242,59 @@ h3 {
     pointer-events: none;
 }
 
+.bottom-frame-wrapper {
+    display: flex;
+    position: relative;
+    max-height: 48px;
+}
+
 .bottom-frame {
-    position: absolute;
+    position: relative;
+    bottom: 0;
     left: 50%;
-    transform: translate(-50%, -100%);
-    top: 100%;
+    transform: translate(-50%);
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.menu-wrapper {
+    display: grid;
+    max-height: 80px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-radius: 10px;
+    background-color: rgb(256, 256, 256, 0.20);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 2px;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-image {
+    width: 33px;
+    height: 32px;
+}
+
+.menu-text {
+    font-family: "Dogica Pixel";
+    line-height: 10px;
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
 }
