@@ -78,6 +78,7 @@ h3 {
     flex-direction: column;
     height: auto;
     align-items: center;
+    gap: 10px;
 }
 
 .counter {
@@ -96,6 +97,12 @@ h3 {
 .blobe-coin {
     width: 40px;
     height: 38px;
+}
+
+.league-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
 .league {
@@ -211,6 +218,16 @@ h3 {
     margin-left: -200px;
     top: 375px;
     font-size: 32px;
+    pointer-events: none;
+}
+
+.flyingtextcopy {
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    position: absolute;
+    z-index: 10;
+    top: 200px;
+    font-size: 20px;
     pointer-events: none;
 }
 

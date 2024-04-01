@@ -11,6 +11,20 @@ var start = 0;
 var energy = 100;
 var refillstate = false;
 
+
+function copyClipboard() {
+    navigator.clipboard.writeText(document.getElementById('league').textContent);
+
+    $('body').append($("<div/>").attr("id", "flyingtext").addClass("flyingtextcopy").css({"top": 200}).html("<div>COPIED</div>").animate({
+        opacity: "0",
+        top: "-=50px"
+      }, 500 , function() {
+        $("#flyingtext").remove();
+      }));
+}
+
+document.getElementById('copyLeagy').onclick = copyClipboard;
+
 function expandable() {
     if (tg.isExpanded == false) {
         tg.expand();
