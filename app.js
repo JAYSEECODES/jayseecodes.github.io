@@ -7,10 +7,16 @@ tg.setBackgroundColor("#000000")
 const bar = document.querySelector(".bar");
 const coin = document.querySelector(".bubble");
 
+
+var coin_height = document.getElementById('bubble').getBoundingClientRect().height
+var coin_width = document.getElementById('bubble').getBoundingClientRect().width
 var start = 0;
 var energy = 100;
 var refillstate = false;
 
+if (document.body.getBoundingClientRect().height < 665) {
+    $('.nav-bar').remove();
+}
 
 function copyClipboard(event) {
     navigator.clipboard.writeText(document.getElementById('league').textContent);
@@ -28,14 +34,16 @@ document.getElementById('copyLeagy').onclick = copyClipboard;
 function expandable() {
     if (tg.isExpanded == false) {
         tg.expand();
+        coin_height = document.getElementById('bubble').getBoundingClientRect().height
+        coin_width = document.getElementById('bubble').getBoundingClientRect().width
     }
 }
 
 function rotateOnClick(event) {
-    viewWidth = (window.innerWidth - 246) / 2;
-    viewHeight = (window.innerHeight - 227) / 2;
-    xPercentHalf = ((event.clientX - viewWidth) / 246);
-    yPercentHalf = ((event.clientY - viewHeight) / 227);
+    viewWidth = (window.innerWidth - coin_width) / 2;
+    viewHeight = (window.innerHeight - coin_height) / 2;
+    xPercentHalf = ((event.clientX - viewWidth) / coin_width);
+    yPercentHalf = ((event.clientY - viewHeight) / coin_height);
     xPercent = (xPercentHalf - 0.5) * 30;
     yPercent = (0.5 - yPercentHalf) * 30;
     coin.style.setProperty("--xRot", Math.round(xPercent) + "deg");
@@ -55,8 +63,8 @@ $("#bubble").animate({
     opacity: "0"
 }, 0, function() { 
     $("#bubble").delay(350).animate({
-        'width': 246,
-        'height': 227,
+        'width': coin_width,
+        'height': coin_height,
         opacity: "1"
     }, 550, )
 })
@@ -110,12 +118,13 @@ function counterAdd(event) {
             $("#flyingtext").remove();
           }));
         $("#bubble").animate({
-            'width': 235,
-            'height': 216
+            
+            'width': coin_width - 10,
+            'height': coin_height - 10
         }, 50, function() { 
             $("#bubble").animate({
-                'width': 246,
-                'height': 227
+                'width': coin_width,
+                'height': coin_height
             }, 50,)
         })
     } else {
