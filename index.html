@@ -13,49 +13,121 @@
             <div class="nav-bar">
                     <img src="/imgs/sign.png" class="nav-image" alt="x">
             </div>
-            <div class="inner-wrapper">
-                <div class="main-game-wrapper">
-                    <div class="counter-wrapper" id="counter-wrapper">
-                        <div class="counter">
-                            <img src="/imgs/blobe-coin.png" class="blobe-coin" alt="o">
-                            <h1 class="amount" id="amount">0</h1>
+            <div class="slider-wrapper" id="slider-wrapper">
+                <div class="inner-wrapper">
+                    <div class="main-game-wrapper">
+                        <div class="counter-wrapper" id="counter-wrapper">
+                            <div class="counter">
+                                <img src="/imgs/blobe-coin.png" class="blobe-coin" alt="o">
+                                <h1 class="amount" id="amount">0</h1>
+                            </div>
+                            <div class="league-wrapper" id="copyLeagy">
+                                <p class="league" id="league">designer.stark</p>
+                                <img src="/imgs/Copy.svg" class="" alt="">
+                            </div>
                         </div>
-                        <div class="league-wrapper" id="copyLeagy">
-                            <p class="league" id="league">designer.stark</p>
-                            <img src="/imgs/Copy.svg" class="" alt="">
+                        <div class="blob-wrapper">
+                            <img src="/imgs/bubble.png" id="bubble" class="bubble" alt="O">
                         </div>
                     </div>
-                    <div class="blob-wrapper">
-                        <img src="/imgs/bubble.png" id="bubble" class="bubble" alt="O">
+                    <div class="stamina-bar-wrapper" id="stamina-wrapper">
+                        <div class="energy-wrapper">
+                            <img src="imgs/energy-ico.png" class="energy-ico" alt="⚡">
+                            <p class="energy-amount" id="energy-amount">100</p>
+                            <div class="progress">
+                                <div class="bar"></div>
+                              </div>
+                        </div>
                     </div>
                 </div>
-                <div class="stamina-bar-wrapper" id="stamina-wrapper">
-                    <div class="energy-wrapper">
-                        <img src="imgs/energy-ico.png" class="energy-ico" alt="⚡">
-                        <p class="energy-amount" id="energy-amount">100</p>
-                        <div class="progress">
-                            <div class="bar"></div>
-                          </div>
+                <div class="inner-wrapper-boost">
+                    <div class="boost-screen-wrapper">
+                        <div class="daily-wrapper">
+                            <h3 class="daily-text">Free daily boosters</h3>
+                            <div class="cards-wrapper">
+                                <div class="daily-card">
+                                    <div class="daily-name">
+                                        <p class="daily-name-text">Turbo</p>
+                                        <img src="/imgs/boostdaily.png" class="daily-name-icon">
+                                    </div>
+                                    <div class="daily-counter">
+                                        <div class="daily-counter-line"></div>
+                                        <div class="daily-counter-line"></div>
+                                        <div class="daily-counter-line"></div>
+                                    </div>
+                                </div>
+                                <div class="daily-card">
+                                    <div class="daily-name">
+                                        <p class="daily-name-text">Full energy</p>
+                                        <img src="/imgs/energy-ico-daily.png" class="daily-name-icon">
+                                    </div>
+                                    <div class="daily-counter">
+                                        <div class="daily-counter-line blue"></div>
+                                        <div class="daily-counter-line blue"></div>
+                                        <div class="daily-counter-line blue"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop-wrapper">
+                        <h3 class="daily-text">Boosters</h3>
+                        <div class="shop">
+                            <div class="shop-item">
+                                <div class="shop-preview">
+                                    <h3 class="shop-preview-text">x15</h3>
+                                </div>
+                                <div class="shop-description-wrapper">
+                                    <div class="shop-description">
+                                        <div class="shop-item-name">
+                                            <p class="daily-name-text">Multitap</p>
+                                            <p class="shop-tag">Lvl 1</p>
+                                        </div>
+                                        <div class="shop-cost">
+                                            <img src="/imgs/blobe-coin.png" class="menu-image" alt="">
+                                            <h3 class="cost">2,000,000</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop-item">
+                                <div class="shop-preview">
+                                    <h3 class="shop-preview-text">6000</h3>
+                                </div>
+                                <div class="shop-description-wrapper">
+                                    <div class="shop-description">
+                                        <div class="shop-item-name">
+                                            <p class="daily-name-text">Energy Limit</p>
+                                            <p class="shop-tag">Lvl 1</p>
+                                        </div>
+                                        <div class="shop-cost">
+                                            <img src="/imgs/blobe-coin.png" class="menu-image" alt="">
+                                            <h3 class="cost">2,000,000</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="menu">
                 <div class="menu-wrapper">
-                    <div class="menu-item">
+                    <div class="menu-item" id="earn">
                         <img src="/imgs/blobe-coin.png" class="menu-image" alt="">
-                        <p class="menu-text">Earn</p>
+                        <p class="menu-text active" id="earn-text">Earn</p>
                     </div>
-                    <div class="menu-item">
-                        <img src="/imgs/blobe-coin.png" class="menu-image" alt="">
-                        <p class="menu-text">Boost</p>
+                    <div class="menu-item" id="boost">
+                        <img src="/imgs/boost.png" class="menu-image" alt="">
+                        <p class="menu-text" id="boost-text">Boost</p>
                     </div>
-                    <div class="menu-item">
-                        <img src="/imgs/blobe-coin.png" class="menu-image" alt="">
-                        <p class="menu-text">Swap</p>
+                    <div class="menu-item" id="swap">
+                        <img src="/imgs/swap.png" class="menu-image" alt="">
+                        <p class="menu-text" id="swap-text">Swap</p>
                     </div>
-                    <div class="menu-item">
-                        <img src="/imgs/blobe-coin.png" class="menu-image" alt="">
-                        <p class="menu-text">Send</p>
+                    <div class="menu-item" id="send">
+                        <img src="/imgs/send.png" class="menu-image" alt="">
+                        <p class="menu-text" id="send-text">Send</p>
                     </div>
                 </div>
                 <div class="bottom-frame-wrapper">

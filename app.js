@@ -131,3 +131,26 @@ function counterAdd(event) {
         
     }
 }
+
+document.getElementById('boost').onclick = boostSwipe;
+document.getElementById('earn').onclick = earnSwipe;
+
+function boostSwipe() {
+    tg.HapticFeedback.impactOccurred('light');
+    document.getElementById('send-text').classList.remove("active");
+    document.getElementById('swap-text').classList.remove("active");
+    document.getElementById('earn-text').classList.remove("active");
+    document.getElementById('boost-text').classList.remove("active");
+    document.getElementById('boost-text').classList.add("active");
+    document.getElementById('slider-wrapper').style.translate = '-224px 0px';
+}
+
+function earnSwipe() {
+    tg.HapticFeedback.impactOccurred('light');
+    document.getElementById('send-text').classList.remove("active");
+    document.getElementById('swap-text').classList.remove("active");
+    document.getElementById('earn-text').classList.remove("active");
+    document.getElementById('boost-text').classList.remove("active");
+    document.getElementById('earn-text').classList.add("active");
+    document.getElementById('slider-wrapper').style.translate = '230px 0px';
+}
