@@ -19,6 +19,9 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,9 +36,6 @@ body {
     max-width: 100%;
     max-height: 640px;
     position: relative;
-    overflow-y: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
     display: flex;
     flex-direction: column;
     gap: 35px;
