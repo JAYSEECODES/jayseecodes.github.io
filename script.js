@@ -33,4 +33,14 @@ $(".tag-item").click(function(){
 });
 
 
+function expandable() {
+    if (tg.isExpanded == false) {
+        tg.expand();
+        coin_height = document.getElementById('bubble').getBoundingClientRect().height
+        coin_width = document.getElementById('bubble').getBoundingClientRect().width
+    }
+}
+
+
+document.body.addEventListener("click", expandable)
 SlideUp(cards)
