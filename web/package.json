@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "author": {
-    "name": "Nestor Bonilla",
-    "url": "https://0xNestor.com"
+    "name": "Ermakow",
+    "url": "https://x.com/ermakowkilledme"
   },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@headlessui/react": "^2.0.3",
@@ -18,6 +20,8 @@
     "@starknet-react/core": "3.0.0-beta.2",
     "@starknet-react/typescript-config": "0.0.0",
     "get-starknet-core": "^4.0.0",
+    "@cartridge/connector": "^0.3.46",
+    "react-hook-form": "^7.53.2",
     "lodash": "^4.17.21",
     "next": "14.2.8",
     "react": "^18",
